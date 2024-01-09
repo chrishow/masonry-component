@@ -8,10 +8,10 @@
 
 ## Benefits
 
- - **Super simple**: just one javascript file
- - **Really small**: 6.5k unzipped, 1.5k stripped and zipped
- - **Super fast**: No recalculation on resize (unless you change the number of columns, when it will happen automatically)
- - **Configurable with CSS**: Uses CSS vars to configure, so is easy to use in responsive pages
+ - **👼 Super simple**: just one javascript file
+ - **🤏 Really small**: 6.5k unzipped, 1.5k stripped and zipped
+ - **🏃 Super fast**: No recalculation on resize (unless you change the number of columns, when it will happen automatically)
+ - **🔧 Configurable with CSS**: Uses CSS vars to configure, so is easy to use in responsive pages
  
  ## How to use
  Include the javascript:
