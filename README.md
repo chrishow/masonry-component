@@ -38,7 +38,7 @@ masonry-component {
 	--masonry-column-count: 3;
 }
 ```
-`masonry-gap` can be specified in pretty much any unit (px, rem, em, vw). Technically, it can be any unit that works as a `margin-bottom`, so percentage units are not supported. 
+`masonry-gap` can be specified in pretty much any unit (`px`, `rem`, `em`, `vw`). Technically, it can be any unit that works as a `margin-bottom`, so percentage units are not supported.
 
 This makes it super easy to change the number of columns at smaller widths, eg:
 ```css
