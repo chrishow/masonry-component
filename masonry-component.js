@@ -208,7 +208,7 @@ class MasonryComponent extends HTMLElement {
   }
 
   /**
-   * The gap 
+   * The gap between columns and below items
    */
   get gap() {
     // Meaasure sizer element to get pixel size
@@ -225,8 +225,6 @@ class MasonryComponent extends HTMLElement {
         smallestIndex = i;
       }
     });
-
-    // console.log(colHeights);
 
     return smallestIndex;
   }
