@@ -68,4 +68,4 @@ document.querySelectorAll('masonry-layout img').forEach(
 Licen[c|s]e is [MIT](https://opensource.org/license/mit/), you can do what pretty much you want with it. 
 
 ## Credits
-`masonry-component` was written by [Chris How](https://github.com/chrishow/), loosely based on [andreasbm/masonry-layout](https://github.com/andreasbm/masonry-layout)
+`masonry-component` was written by [Chris How](https://github.com/chrishow/), based on [andreasbm/masonry-layout](https://github.com/andreasbm/masonry-layout)
