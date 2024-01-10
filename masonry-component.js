@@ -1,14 +1,13 @@
 "use strict";
 
-const COL_COUNT_CSS_VAR_NAME = '--masonry-column-count';
+const COL_COUNT_CSS_VAR_NAME = "--masonry-column-count";
 const DEFAULT_COL_COUNT = 3;
 
-const GAP_CSS_VAR_NAME = '--masonry-gap';
+const GAP_CSS_VAR_NAME = "--masonry-gap";
 const DEFAULT_GAP_PX = 10;
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType
 const ELEMENT_NODE_TYPE = 1;
-
 
 const $template = document.createElement("template");
 $template.innerHTML = `
@@ -72,10 +71,10 @@ class MasonryComponent extends HTMLElement {
   connectedCallback() {
     window.addEventListener("resize", this.onResize);
 
-    // 'sizer' element is used to measure gap so it can be specified 
+    // 'sizer' element is used to measure gap so it can be specified
     // in rem, em, vw, px
-    this.$sizer = document.createElement('div');
-    this.$sizer.setAttribute('id','sizer');
+    this.$sizer = document.createElement("div");
+    this.$sizer.setAttribute("id", "sizer");
     this.shadowRoot.appendChild(this.$sizer);
 
     this.renderedColumnCount = 0;
@@ -98,11 +97,10 @@ class MasonryComponent extends HTMLElement {
 
   onResize() {
     // If the number of columns haven't changed, no need to relayout
-    if(this.renderedColumnCount !== this.columnCount) {
+    if (this.renderedColumnCount !== this.columnCount) {
       this.layout();
     }
   }
-
 
   layout() {
     const colCount = this.columnCount;
@@ -114,7 +112,9 @@ class MasonryComponent extends HTMLElement {
     // const gap = this.gap;
     const gap = this.gap;
 
-    const $elements = Array.from(this.children).filter(node => node.nodeType === ELEMENT_NODE_TYPE);
+    const $elements = Array.from(this.children).filter(
+      (node) => node.nodeType === ELEMENT_NODE_TYPE
+    );
     // console.log($elements);
 
     // An array that keeps track of the highest col height.
@@ -126,7 +126,6 @@ class MasonryComponent extends HTMLElement {
     // Go through all elements and figure out what column (aka slot) they should be put in.
     // We only do reads in this for loop and postpone the writes
     for (const $elem of $elements) {
-
       // Read the height of the element
       const height = $elem.getBoundingClientRect().height;
 
@@ -156,9 +155,9 @@ class MasonryComponent extends HTMLElement {
   }
 
   /**
-* Render X amount of columns.
-* @param colCount
-*/
+   * Render X amount of columns.
+   * @param colCount
+   */
   renderCols(colCount) {
     // Get the current columns
     const $columns = this.columns;
@@ -175,7 +174,6 @@ class MasonryComponent extends HTMLElement {
 
     // Add some new columns
     for (let i = 0; i < colCount; i++) {
-
       // Create a column element
       const $column = document.createElement(`div`);
       $column.classList.add(`column`);
@@ -199,8 +197,10 @@ class MasonryComponent extends HTMLElement {
   }
 
   get columnCount() {
-    let currentColCount = this.masonryComputedStyle.getPropertyValue(COL_COUNT_CSS_VAR_NAME);
-    if(!currentColCount) {
+    let currentColCount = this.masonryComputedStyle.getPropertyValue(
+      COL_COUNT_CSS_VAR_NAME
+    );
+    if (!currentColCount) {
       currentColCount = DEFAULT_COL_COUNT;
     }
 
@@ -213,8 +213,8 @@ class MasonryComponent extends HTMLElement {
   get gap() {
     // Meaasure sizer element to get pixel size
     const calculatedGap = this.$sizer.clientWidth;
-		return calculatedGap;
-	}
+    return calculatedGap;
+  }
 
   findSmallestColIndex(colHeights) {
     let smallestIndex = 0;

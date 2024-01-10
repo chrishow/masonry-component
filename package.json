@@ -1,0 +1,54 @@
+{
+  "name": "masonry-component",
+  "version": "0.1.0",
+  "description": "A A simple but performant Web Component for 'masonry' style layouts.",
+  "keywords": [
+    "web component",
+    "masonry",
+    "web-component",
+    "custom-element"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrishow/masonry-component"
+  },
+  "author": "chrislhow@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrishow/masonry-component/issues"
+  },
+  "homepage": "https://github.com/chrishow/masonry-component",
+  "module": "masonry-component.js",
+  "main": "masonry-component.js",
+  "source": "masonry-component.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "npm run minify",
+    "minify": "terser masonry-component.js -o masonry-component.min.js -c -m",
+    "lint": "npm run lint:formatting && npm run lint:size",
+    "lint:formatting": "prettier --check .",
+    "lint:size": "bundlesize",
+    "fix:formatting": "prettier --write ."
+  },
+  "devDependencies": {
+    "bundlesize": "^0.18.0",
+    "prettier": "^2.1.2",
+    "terser": "^5.3.5"
+  },
+  "files": [
+    "masonry-component.js",
+    "masonry-component.min.js"
+  ],
+  "exports": {
+    ".": {
+      "import": "./masonry-component.js",
+      "default": "./masonry-component.js"
+    }
+  },
+  "bundlesize": [
+    {
+      "path": "./masonry-component.min.js",
+      "maxSize": "2 KB"
+    }
+  ]
+}
