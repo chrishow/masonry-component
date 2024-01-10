@@ -1,7 +1,7 @@
 {
-  "name": "masonry-component",
-  "version": "0.1.0",
-  "description": "A A simple but performant Web Component for 'masonry' style layouts.",
+  "name": "@chrishow/masonry-component",
+  "version": "1.0.0",
+  "description": "A simple but performant Web Component for 'masonry' style layouts.",
   "keywords": [
     "web component",
     "masonry",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/chrishow/masonry-component/issues"
   },
-  "homepage": "https://github.com/chrishow/masonry-component",
+  "homepage": "https://github.com/chrishow/masonry-component#readme",
   "module": "masonry-component.js",
   "main": "masonry-component.js",
   "source": "masonry-component.js",
