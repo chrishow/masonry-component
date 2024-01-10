@@ -20,7 +20,7 @@ Download from the GitHub repository, or `npm install @chrishow/masonry-component
 Include the javascript:
 
 ```javascript
-<script src="path/to/masonry-component.min.js"></script>
+<script src="path/to/masonry-component.js"></script>
 ```
 
 Add the HTML:
