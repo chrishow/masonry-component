@@ -58,7 +58,7 @@ masonry-component {
   --masonry-column-count: 3;
 
   @media (max-width: 800px) {
-    --masonry-column-count: 3;
+    --masonry-column-count: 2;
   }
 }
 ```
