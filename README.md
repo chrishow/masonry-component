@@ -2,7 +2,7 @@
 
 `masonry-component` is a lightweight, zero-dependencies [Web Component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) which allows you to display a bunch of images of different sizes in a 'masonry' style grid.
 
-<p align="center"><a href='https://htmlpreview.github.io/?https://raw.githubusercontent.com/chrishow/masonry-component/main/index.html' target=_blank'>Simple demo here</a></p>
+<p align="center"><a href='https://htmlpreview.github.io/?https://raw.githubusercontent.com/chrishow/masonry-component/main/index.html' target='_blank'>Simple demo here</a></p>
 
 ## Benefits
 
